@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(90deg, rgba(5, 95, 159, 1) 10%, rgba(9, 50, 121, 1) 18%, rgba(6, 195, 247, 1) 93%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh
+}
+
+
+
+.splash-container {
+    margin-top: 30px;
+    background-color: aliceblue;
+    background: linear-gradient(90deg, rgba(188, 192, 194, 0.26516544117647056) 0%, rgba(195, 205, 226, 0.23715423669467783) 21%, rgba(164, 222, 238, 0.41642594537815125) 93%);
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 900px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: #cfe2f3;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+.splash-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: floralwhite;
+    margin-top: 3px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #bdd4e7;
+    background: linear-gradient(90deg, rgba(188, 192, 194, 0.26516544117647056) 0%, rgba(102, 102, 102, 0.23715423669467783) 21%, rgba(20, 20, 20, 0.41642594537815125) 93%);
+    border-radius: 10px;
+
+
+    color: #05325b;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+    border: #8693ab;
+    border-radius: 4px;
+
+}
+
+.names li {
+    display: inline;
+    padding-right: 20px;
+
+}
+
+.names {
+    margin-top: 25px;
+    background-color: #8693ab;
+    background: linear-gradient(90deg, rgba(188, 192, 194, 0.26516544117647056) 0%, rgba(195, 205, 226, 0.23715423669467783) 21%, rgba(164, 222, 238, 0.41642594537815125) 93%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #05325b;
+    font-weight: bold;
+    width: 100%;
+    text-align: right;
+
+
+}

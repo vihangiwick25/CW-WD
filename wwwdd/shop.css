@@ -1,0 +1,443 @@
+body {
+    background-image: url(https://img.freepik.com/free-photo/pattern-textured-color-light-backdrop_1203-5630.jpg?w=1480&t=st=1690088398~exp=1690088998~hmac=1c8a7754bc92954673fae8f1f74db244b0981e8b73f0f3d48565563b76af5f43);
+
+}
+
+.sectionp-1 p,
+.sectionp-1 h2 {
+    color: #05325b;
+    font-family: 'Montserrat', sans-serif, 'Poppins', sans-serif;
+
+}
+
+.header {
+    color: #05325b;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif, 'Poppins', sans-serif;
+    background-image: url(https://th.bing.com/th/id/OIP.bjKHhUKkprhuZAIE2VH7_wHaFj?pid=ImgDet&rs=1);
+    background-size: cover;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.header h1 {
+    font-size: 80px;
+    margin-bottom: 30px;
+    margin-left: 18px;
+}
+
+.header h2 {
+    margin-bottom: 60px;
+    margin-left: 18px;
+
+}
+
+#product1 {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.procontainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro {
+    width: 20%;
+    min-width: 250px;
+    padding: 10px 12px;
+    background-color: #f2f2f2;
+
+    border: 1px solid whitesmoke;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(127, 126, 126, 0.1);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(127, 126, 126, 0.5);
+
+}
+
+#product1 .pro .desc {
+    text-align: start;
+    padding: 5px 0;
+}
+
+#product1 .pro .desc h5 {
+    padding-top: 4px;
+    color: #252525;
+    font-size: 20px;
+}
+
+#product1 .pro .desc h4 {
+    font-size: 24px;
+    color: rgb(78, 78, 78);
+}
+
+#product1 .pro .desc i {
+    font-size: 20px;
+    color: rgb(255, 208, 0);
+
+}
+
+.buy {
+    margin-left: 60px;
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #05325b;
+    color: azure;
+    padding-bottom: 10px;
+}
+
+.buy:hover,
+.cart:hover {
+    background-color: #2980b9;
+}
+
+.pro img {
+    height: 200px;
+}
+
+input[type="number"] {
+    width: 30px;
+    margin-bottom: 20px;
+}
+
+.details {
+    position: fixed;
+    top: 98%;
+    left: 0px;
+    right: 0%;
+    transform: translateY(-50%);
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 380px;
+    height: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.drawer.open {
+    transform: translateX(0%);
+}
+
+.drawer-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+.drawer-footer {
+    position: sticky;
+    bottom: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Add a background color to the footer */
+}
+
+.drawerbutton,
+.checkout,
+.close-splash,
+.close-modal,
+.close-drawer,
+.view,
+.paynow-button {
+    padding: 10px 12px;
+    background-color: #05325b;
+    color: azure;
+    font-size: medium;
+}
+
+.close-drawer {
+    margin-left: 75%;
+}
+
+.drawer input[type="text"],
+.drawer input[type="tel"],
+.drawer input[type="number"] {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Style for the table inside the drawer */
+#selectedItemsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Style for the table header */
+#selectedItemsTable th {
+    background-color: #f2f2f2;
+    text-align: left;
+
+    padding: 8px;
+}
+
+/* Style for the table rows (alternating row colors) */
+#selectedItemsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style for the table cells */
+#selectedItemsTable td {
+    padding: 8px;
+}
+
+/* Add the blur effect to the surrounding elements when the checkout modal is open */
+.modal-open {
+    filter: blur(5px);
+    pointer-events: none;
+    /* This prevents the blurred elements from receiving any interactions */
+}
+
+.modal {
+
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    height: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.modal h2 {
+    text-align: center;
+    font-size: xx-large;
+
+}
+
+.modal-content {
+    text-align: center;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+
+
+#modalTotalPrice {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.close-modal {
+    margin-right: 10px;
+}
+
+
+/* Add some styling to the checkout total section */
+.checkout-total {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+
+/* Style for the splash screen */
+
+/* Add some spacing between sections */
+.checkout-total {
+    margin-bottom: 10px;
+}
+
+/* Add some styling to the payment form sections */
+#paymentForm {
+    margin-top: 20px;
+}
+
+/* Rest of the CSS remains the same */
+
+/* Add some styling to the payment form sections */
+#paymentForm {
+    margin-top: 20px;
+}
+
+.payment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.payment-section label {
+    flex-basis: 150px;
+}
+
+.payment-section input,
+.payment-section select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.payment-section select {
+    width: 100%;
+}
+
+.payment-section input[type="password"] {
+    font-family: "Arial", sans-serif;
+}
+
+.payment-section select:invalid {
+    color: gray;
+}
+
+/* Style for the checkout button */
+.checkout {
+    padding: 10px 12px;
+    background-color: #05325b;
+    color: azure;
+    margin-right: 10px;
+}
+
+.address-section {
+    margin-top: 20px;
+}
+
+.address-section h3 {
+    margin-bottom: 10px;
+}
+
+.address-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.address-row label {
+    flex: 1;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.address-row input {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-section {
+    margin-top: 20px;
+}
+
+.contact-section h3 {
+    margin-bottom: 10px;
+}
+
+.email,
+.phonenumber {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.email label,
+.phonenumber label {
+    flex: 1;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.email input,
+.phonenumber input {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* CSS for the Success Modal */
+#successModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+#successModal h2 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+#successModal p {
+    text-align: center;
+    font-size: large;
+    margin-top: 10px;
+}
+
+#successModal .close-success {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#successModal .close-success:hover {
+    background-color: #0056b3;
+}

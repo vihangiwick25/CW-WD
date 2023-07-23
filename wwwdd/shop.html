@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciGuru - Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="blurContainer">
+
+        <div class="header">
+            <h1 class="topic">SciGuru Shop</h1>
+            <h2 class="subtopic2">Popular Science Tools and Resources.....</h2>
+        </div>
+
+        <section id="product1" class="sectionp-1">
+            <h2>Products</h2>
+            <p>Science education supplies and resources</p>
+            <div>
+                <button class="view" onclick="showDrawer()">View Cart</button>
+            </div>
+
+
+            <div class="procontainer">
+                <div class="pro">
+                    <img src="imgs\CE-KIT01__96780.jpg" alt="Chemistry Equipment Set">
+                    <div class="desc">
+                        <h5>Basic Chemistry Equipment Set</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <h4>$68.56</h4>
+                            <label for="quantity" class="labelq">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1"> <br>
+                            <button class="buy">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro">
+                    <img src="imgs\bacteria-kit-2018__63815.jpg" alt="Bacteria Test Kit">
+                    <div class="desc">
+                        <h5>Bacteria Test Kit <br>(Growing) </h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <h4>$42.20</h4>
+                            <label for="quantity" class="labelq">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1"> <br>
+                            <button class="buy">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro">
+                    <img src="imgs\Elementary-Chemistry-and-Physics__44917.jpg" alt="Elementary-Chemistry-and-Physics">
+                    <div class="desc">
+                        <h5>Elementary Chemistry and Physics</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <h4>$29.78</h4>
+                            <label for="quantity" class="labelq">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1"> <br>
+                            <button class="buy">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <div class="drawer" id="drawer">
+            <button class="close-drawer" onclick="closeDrawer()">Close</button> <br>
+
+            <label for="name" class="customername">Name: </label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required> <br>
+            <label for="contact" class="customercontact">Contact Number: </label>
+            <input type="tel" id="contact" placeholder="Enter your contact number" required><br>
+            <label for="delivery" class="delivery">Express Delivery </label>
+            <input type="checkbox" id="delivery" required> <br>
+
+            <h3>Your Cart</h3>
+            <table id="selectedItemsTable">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Item Total</th>
+                    </tr>
+                </thead>
+                <tbody id="selectedItems"></tbody>
+            </table>
+            <div class="drawer-footer">
+                <p id="totalPrice">Total: $0.00</p>
+                <button onclick="closeDrawer()" class="drawerbutton">Clear</button>
+                <button class="checkout" onclick="showCheckoutModal()">Check Out</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="checkoutModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Checkout</h2>
+            <div class="checkout-total">
+                <p id="modalTotalPrice">$0.00</p>
+            </div>
+            <hr>
+            <form id="paymentForm">
+                <h4>Payment Details:</h4>
+                <div class="payment-section">
+                    <label for="cardType">Choose Card Type:</label>
+                    <select id="cardType" name="cardType" required>
+                        <option value="">Select Card Type</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="visa">Visa</option>
+                    </select>
+                </div>
+
+                <div class="payment-section">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
+                </div>
+
+                <div class="payment-section">
+                    <label for="expiryDate">Expiration Date:</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+                </div>
+
+                <div class="payment-section">
+                    <label for="cardHolderName">Cardholder's Name:</label>
+                    <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Enter cardholder's name"
+                        required>
+                </div>
+
+                <div class="payment-section">
+                    <label for="cardPassword">Card Password:</label>
+                    <input type="password" id="cardPassword" name="cardPassword" placeholder="Enter card password"
+                        required>
+                </div>
+                <hr>
+                <div class="address-section">
+                    <h4>Shipping Details</h4>
+                    <div class="address-row">
+                        <label for="addressLine1">Address Line 1:</label>
+                        <input type="text" id="addressLine1" name="addressLine1" placeholder="Enter address line 1"
+                            required>
+                    </div>
+                    <div class="address-row">
+                        <label for="addressLine2">Address Line 2:</label>
+                        <input type="text" id="addressLine2" name="addressLine2" placeholder="Enter address line 2">
+                    </div>
+                    <div class="address-row">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" placeholder="Enter city" required>
+                    </div>
+                    <div class="address-row">
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state" placeholder="Enter state" required>
+                    </div>
+                    <div class="address-row">
+                        <label for="zipCode">Zip Code:</label>
+                        <input type="text" id="zipCode" name="zipCode" placeholder="Enter zip code" required>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="contact-section">
+                    <h4>Shipping Details</h4>
+                    <div class="email">
+                        <label for="email">email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+                    </div>
+                    <div class="phonenumber">
+                        <label for="phonenumber">Mobile Number:</label>
+                        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your mobile number ">
+                    </div>
+
+            </form>
+
+            <button class="close-modal" onclick="exitCheckoutModal()">Close</button>
+            <button class="paynow-button" id="paynowButton" onclick="showSplashScreen()">Pay Now</button>
+
+        </div>
+    </div>
+
+    <div class="successmodal" id="successModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Transaction Successful</h2>
+            <p>Thank you for your purchase!</p>
+            <button class="close-success" onclick="exitSuccessModal()">Close</button>
+        </div>
+    </div>
+
+
+
+    <script src="shop.js"></script>
+</body>
+
+</html>
